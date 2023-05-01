@@ -1,6 +1,6 @@
 {
   "name": "react-ts-full-page-door",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A React library written in TypeScript for creating smooth full-page door animations to switch between components.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
