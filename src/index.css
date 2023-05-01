@@ -1,0 +1,175 @@
+* {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-size: 16px;
+    background-color: #1d1d1e;
+}
+
+#root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    text-align: center;
+}
+
+.bottom-space {
+    margin-bottom: 2rem;
+}
+
+.main-container,
+.subcontent-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.grid-item {
+    background-color: #f1f1f1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 250px;
+    flex-grow: 1;
+    margin: 5px;
+    height: 150px;
+}
+
+
+
+.btn {
+    height: 200px;
+    width: 200px;
+    background-color: #0d85da;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .3s ease-out;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.btn.small {
+    height: 50px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #0f92ef;
+}
+
+/*** IMAGE DOOR ***/
+
+.door-container img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+/*** ROCKET ANIM DOOR ***/
+
+.anim-rocket {
+    height: 200px;
+    animation: anim-for-rocket 2s ease-in backwards;
+}
+
+@keyframes anim-for-rocket {
+    0% {
+        transform: translate(-250px, 250px);
+    }
+    100% {
+        transform: translate(350px, -350px);
+    }
+
+}
+
+/*** ANIMATED DOOR ***/
+
+.logo-anim-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.logo-anim-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.logo-anim-container img:nth-child(1) {
+    animation: leftToRight .7s ease-out backwards;
+}
+
+.logo-anim-container img:nth-child(2) {
+    animation: rightToLeft .7s ease-out backwards;
+}
+
+.subtext {
+    display: block;
+    animation: bottomToTop .5s .7s ease-out backwards;
+}
+
+@keyframes leftToRight {
+    0% {
+        left: -500px
+    }
+    100% {
+        left: 0
+    }
+
+}
+
+@keyframes rightToLeft {
+    0% {
+        left: 500px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes bottomToTop {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
