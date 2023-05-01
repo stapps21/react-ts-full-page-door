@@ -1,6 +1,6 @@
 node_modules
 yarn.lock
 .parcel-cache
-dist
+docs
 yarn-error.log
 .idea
